@@ -23,28 +23,28 @@ const Tile = (props: TileProps) => {
 
   return (
     <div className="flex rounded-lg my-2 bg-white">
-      <div className="flex-none w-48 relative">
+      <div className="flex-none w-1/2 sm:w-48 relative">
         <img
           src={imageUrl || PLACEHOLDER_IMAGE_URL}
           alt={title}
           className="absolute inset-0 w-full h-full object-cover rounded-lg"
         />
       </div>
-      <div className="flex-auto p-6">
+      <div className="flex-auto p-2 sm:p-6">
         <div className="flex flex-wrap">
-          <h1 className="flex-auto text-xl font-semibold">{title}</h1>
-          <div className="text-xl font-semibold text-gray-500">
+          <h1 className="flex-auto sm:text-xl font-semibold">{title}</h1>
+          <div className="sm:text-xl font-semibold text-gray-500">
             {product.price && `$${product.price}`}
           </div>
-          <div className="w-full flex-none text-sm font-medium text-gray-500 my-2">
+          <div className="w-full hidden sm:block sm:flex-none text-sm font-medium text-gray-500 my-2">
             {notes}
           </div>
         </div>
-        <div className="flex flex-wrap my-2 text-sm font-medium">
-          <span className="w-5/12 min-w-140 mb-1 mr-2">
+        <div className="flex flex-wrap sm:space-x-2 my-2 text-xs sm:text-sm font-medium">
+          <span className="sm:w-5/12 w-full mb-1">
             <BuyButton title={title} />
           </span>
-          <span className="w-5/12	h-9 min-w-140">
+          <span className="sm:w-5/12 w-full h-9">
             <Link to={`/product/${product.id.toLowerCase()}`}>
               <button
                 className="w-full h-full rounded-sm border border-gray-300"

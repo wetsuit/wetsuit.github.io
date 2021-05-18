@@ -32,13 +32,13 @@ const Product = ({ data }) => {
     <Layout>
       <Seo title={title} />
       <Link to="/">
-        <button className="w-16 h-7 border-gray-300" type="button">
+        <button className="w-16 h-7 border-gray-300 my-2" type="button">
           &#x2B05; Back
         </button>
       </Link>
 
       <div className="flex flex-wrap w-full">
-        <Carousel className="w-6/12">
+        <Carousel className="w-full sm:w-1/2">
           {images.map(edge => {
             return (
               <div>
@@ -48,7 +48,7 @@ const Product = ({ data }) => {
           })}
         </Carousel>
         
-        <div className="ml-2 w-5/12 min-w-350">
+        <div className="w-full sm:w-5/12 sm:ml-2 ">
           <BuyButton title={title} className="my-2" />
           {Array.from(details).map(([key, val]) => {
             return (

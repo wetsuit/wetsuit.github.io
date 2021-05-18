@@ -22,7 +22,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="Home" />
-      <h1>Our current inventory</h1>
       <Filter onFilterChange={e => setFilter(e.target.id)} />
       {products
         .filter(p => filter === "All" || p.category === filter) // todo: refactor

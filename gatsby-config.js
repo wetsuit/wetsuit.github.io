@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Like New & Pre-owned Wetsuits 🏄‍♀️ 🌊 🏄‍♂️`,
+    title: `Used Wetsuits 🌊`,
     description: `Serving San Jose and Santa Cruz County, California 🙂`,
     author: `:)`,
   },

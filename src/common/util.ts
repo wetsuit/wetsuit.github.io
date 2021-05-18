@@ -1,6 +1,6 @@
 import { Wetsuit } from "./types";
 
-export const PLACEHOLDER_IMAGE_URL = "https://placekitten.com/350/350";
+export const PLACEHOLDER_IMAGE_URL = "https://placekitten.com/250/250";
 
 export const getSize = (product: Wetsuit) => {
   const cat =
