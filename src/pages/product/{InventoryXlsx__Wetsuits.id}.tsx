@@ -11,14 +11,15 @@ import { Carousel } from "react-responsive-carousel";
 const Product = ({ data }) => {
   const product: Wetsuit = data["product"]["nodes"][0];
   const title = getTitle(product);
-  const details = new Map([ // using map to preserve insertion order
+  const details = new Map([
+    // using map to preserve insertion order
     ["Brand", product.brand],
     ["Size", getSize(product)],
     ["Thickness", product.thickness],
     ["Condition", product.condition ?? "Pre-owned"],
     ["Price", product.price ? `$${product.price}` : "Please inquire"],
     ["Color", product.color],
-    ["", `${product.feature}${product.hooded ? ", Hooded" : ""}`]
+    ["", `${product.feature}${product.hooded ? ", Hooded" : ""}`],
   ]);
 
   const images = data["images"]["edges"];
@@ -47,7 +48,7 @@ const Product = ({ data }) => {
             );
           })}
         </Carousel>
-        
+
         <div className="w-full sm:w-5/12 sm:ml-2 ">
           <BuyButton title={title} className="my-2" />
           {Array.from(details).map(([key, val]) => {

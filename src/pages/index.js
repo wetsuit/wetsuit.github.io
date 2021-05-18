@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
   const [filter, setFilter] = useState("All");
   const imageUrlMap = buildImageUrlMap(data);
   const products = data["products"]["nodes"];
-  
+
   return (
     <Layout>
       <Seo title="Home" />
