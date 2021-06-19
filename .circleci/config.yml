@@ -17,6 +17,7 @@ jobs:
     # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/node
     docker:
       - image: cimg/node:12.16.3
+    resource_class: small
     # CircleCI will report the results back to your VCS provider.
     steps:
       # Checkout the code as the first step.
@@ -34,7 +35,7 @@ jobs:
             git config user.name "Deployment Bot"
             git fetch origin build:build
             rm -rf node_modules/.cache/gh-pages
-            gh-pages -d public -b build
+            node_modules/gh-pages/bin/gh-pages -d public -b build
 
 workflows:
   # Below is the definition of your workflow.
