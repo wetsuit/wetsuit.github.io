@@ -18,13 +18,13 @@
 
 ## Tips
 
-`cd` stands for Change Directory (change the current folder) and will take you to the home directory
-`cd <path>` changes you to the directory specified by <path>
-`ls` lists all the items in the current directory
-`pwd` prints the path of where you are
-`git status` tells you what branch you're on (you should always be on "main")
-`git log` shows you what commits are on the branch you're on
-`git checkout build` changes to the build branch (there are two branches, "main" for source code and "build" for the deployed files)
+`cd` stands for Change Directory (change the current folder) and will take you to the home directory  
+`cd <path>` changes you to the directory specified by <path>  
+`ls` lists all the items in the current directory  
+`pwd` prints the path of where you are  
+`git status` tells you what branch you're on (you should always be on "main")  
+`git log` shows you what commits are on the branch you're on  
+`git checkout build` changes to the build branch (there are two branches, "main" for source code and "build" for the deployed files)  
 
 ## Example flow
 Goal: I want to update the inventory, add some images, and change the website background color.
